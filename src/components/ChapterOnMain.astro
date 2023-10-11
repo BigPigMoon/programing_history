@@ -1,0 +1,17 @@
+---
+import { Image } from "astro:assets";
+const { image, title, desc, link } = Astro.props;
+---
+
+<div class="card w-full bg-base-100 shadow-xl">
+  <figure>
+    <Image class="w-full" src={image} alt={title} />
+  </figure>
+  <div class="card-body">
+    <h2 class="card-title">{title}</h2>
+    <p>{desc}</p>
+    <div class="card-actions justify-end">
+      <a href={link} class="btn btn-primary">Подробнее</a>
+    </div>
+  </div>
+</div>

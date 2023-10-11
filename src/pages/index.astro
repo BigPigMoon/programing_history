@@ -1,7 +1,39 @@
 ---
+import { Image } from "astro:assets";
+import programmingAndSpace from "../images/programmingAndSpace.jpg";
+import programmersAcademCity from "../images/programmersAcademCityHightRes.jpg";
+import USSRStudents from "../images/USSRStudents.jpg";
+import sovietPC from "../images/sovietPC.png";
+
 import BaseLayout from "../layouts/BaseLayout.astro";
+import ChapterOnMain from "../components/ChapterOnMain.astro";
 ---
 
 <BaseLayout pageTitle="Главная">
-	<h2 class="text-xl font-bold">Мой крутой подзаголовок блога!</h2>
+  <div class="w-full grid grid-cols-1 md:grid-cols-2 gap-10 md:px-20">
+    <ChapterOnMain
+      image={programmingAndSpace}
+      title="Программирование в космосе"
+      desc="лялялялляля"
+      link="/"
+    />
+    <ChapterOnMain
+      image={programmersAcademCity}
+      title="Программисты академ городка"
+      desc="лялялялляля"
+      link="/"
+    />
+    <ChapterOnMain
+      image={USSRStudents}
+      title="Становление системы обучения программирования в СССР"
+      desc="лялялялляля"
+      link="/"
+    />
+    <ChapterOnMain
+      image={sovietPC}
+      title="Программирование и автоматизированные системы управления"
+      desc="лялялялляля"
+      link="/"
+    />
+  </div>
 </BaseLayout>

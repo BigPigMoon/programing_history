@@ -1,15 +1,14 @@
 ---
-import { Image } from "astro:assets";
-import programmingAndSpace from "../images/programmingAndSpace.jpg";
-import programmersAcademCity from "../images/programmersAcademCityHightRes.jpg";
-import USSRStudents from "../images/USSRStudents.jpg";
-import sovietPC from "../images/sovietPC.png";
+import { getCollection } from "astro:content";
 
 import BaseLayout from "../layouts/BaseLayout.astro";
 import ChapterOnMain from "../components/ChapterOnMain.astro";
+import { Image } from "astro:assets";
+
+const allPosts = await getCollection("posts");
 ---
 
-<BaseLayout pageTitle="Главная">
+<BaseLayout pageTitle="Главная" header>
   <div class="flex justify-center my-32">
     <p class="text-center text-3xl font-bold w-full sm:w-2/3">
       Небольшой базовый контент типа "Хочешь ли ты погрузиться и узнать иторию
@@ -17,29 +16,15 @@ import ChapterOnMain from "../components/ChapterOnMain.astro";
     </p>
   </div>
   <div class="w-full grid grid-cols-1 md:grid-cols-2 gap-10 md:px-20">
-    <ChapterOnMain
-      image={programmingAndSpace}
-      title="Программирование и космос"
-      desc="лялялялляля"
-      link="/"
-    />
-    <ChapterOnMain
-      image={programmersAcademCity}
-      title="Программисты академ городка"
-      desc="лялялялляля"
-      link="/"
-    />
-    <ChapterOnMain
-      image={USSRStudents}
-      title="Становление системы обучения программирования в СССР"
-      desc="лялялялляля"
-      link="/"
-    />
-    <ChapterOnMain
-      image={sovietPC}
-      title="Программирование и автоматизированные системы управления"
-      desc="лялялялляля"
-      link="/"
-    />
+    {
+      allPosts.map((post) => (
+        <ChapterOnMain
+          image={post.data.cover}
+          title={post.data.title}
+          desc={post.data.desc}
+          link={"/posts/" + post.slug}
+        />
+      ))
+    }
   </div>
 </BaseLayout>

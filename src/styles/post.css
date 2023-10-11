@@ -10,7 +10,7 @@
         @apply font-bold;
         @apply mb-6;
         @apply mt-4;
-        @apply indent-8;
+        @apply md:indent-8;
     }
 
     h3 {
@@ -25,7 +25,7 @@
     ol {
         @apply list-inside;
         @apply list-disc;
-        @apply indent-8;
+        @apply md:indent-8;
     }
 
     ol {
@@ -34,6 +34,7 @@
 
     p {
         @apply text-justify;
-        @apply indent-4;
+        @apply md:indent-4;
+        @apply text-start
     }
 }

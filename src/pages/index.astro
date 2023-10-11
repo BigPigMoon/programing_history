@@ -3,14 +3,13 @@ import { getCollection } from "astro:content";
 
 import BaseLayout from "../layouts/BaseLayout.astro";
 import ChapterOnMain from "../components/ChapterOnMain.astro";
-import { Image } from "astro:assets";
 
 const allPosts = await getCollection("posts");
 ---
 
 <BaseLayout pageTitle="Главная" header>
-  <div class="flex justify-center my-32">
-    <p class="text-center text-3xl font-bold w-full sm:w-2/3">
+  <div class="flex justify-center md:my-32 mt-8 mb-12">
+    <p class="text-center text-2xl font-bold w-full sm:w-2/3">
       Небольшой базовый контент типа "Хочешь ли ты погрузиться и узнать иторию
       программистов"
     </p>

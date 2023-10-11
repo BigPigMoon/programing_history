@@ -1,17 +1,7 @@
 ---
-
+import BaseLayout from "../layouts/BaseLayout.astro";
 ---
 
-<html lang="en">
-	<head>
-		<meta charset="utf-8" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<meta name="viewport" content="width=device-width" />
-		<meta name="generator" content={Astro.generator} />
-		<title>Astro</title>
-	</head>
-	<body>
-		<h1>My cool Astro web-site</h1>
-		<p>Супер крутой сайт!</p>
-	</body>
-</html>
+<BaseLayout pageTitle="Главная">
+	<h2 class="text-xl font-bold">Мой крутой подзаголовок блога!</h2>
+</BaseLayout>

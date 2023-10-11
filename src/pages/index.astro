@@ -10,10 +10,16 @@ import ChapterOnMain from "../components/ChapterOnMain.astro";
 ---
 
 <BaseLayout pageTitle="Главная">
+  <div class="flex justify-center my-32">
+    <p class="text-center text-3xl font-bold w-full sm:w-2/3">
+      Небольшой базовый контент типа "Хочешь ли ты погрузиться и узнать иторию
+      программистов"
+    </p>
+  </div>
   <div class="w-full grid grid-cols-1 md:grid-cols-2 gap-10 md:px-20">
     <ChapterOnMain
       image={programmingAndSpace}
-      title="Программирование в космосе"
+      title="Программирование и космос"
       desc="лялялялляля"
       link="/"
     />

@@ -6,7 +6,7 @@ import "../styles/global.css";
 const { pageTitle, header } = Astro.props;
 ---
 
-<html lang="ru" data-theme="light">
+<html lang="ru">
   <head>
     <meta charset="utf-8" />
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
@@ -16,7 +16,7 @@ const { pageTitle, header } = Astro.props;
   </head>
   <body class="min-h-screen flex flex-col bg-base-200">
     {header && <Navigation />}
-    <div class="container p-10 sm:mx-auto mb-32">
+    <div class="container p-10 sm:mx-auto mb-32 flex flex-col">
       <slot />
     </div>
     <Footer />

@@ -25,7 +25,7 @@
     ol {
         @apply list-inside;
         @apply list-disc;
-        @apply md:indent-16;
+        @apply md:indent-8;
     }
 
     ol {
@@ -34,7 +34,6 @@
 
     p {
         @apply text-justify;
-        @apply md:indent-4;
         @apply text-start;
         @apply my-4;
     }
